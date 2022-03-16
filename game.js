@@ -82,6 +82,7 @@ function startOver() {
     var userClickedPattern = [];
     $('body').removeClass('game-over');
     $('h1').text('Press A Key to Start');
+    gameOver = false;
 }
 
 // plays the audio
