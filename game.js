@@ -56,7 +56,11 @@ $('div[type="button"]').click(function() {
 
         if (checkAnswer(gamePattern, userClickedPattern) &&
             (userClickedPattern.length === gamePattern.length)) {
-            gamePattern.push(nextSequence());
+            //waits for a sec then next move plays
+            setTimeout(function() {
+                gamePattern.push(nextSequence());
+            }, 1000);
+
             userClickedPattern = [];
         } else if (!(checkAnswer(gamePattern, userClickedPattern)) &&
             (userClickedPattern.length !== gamePattern.length)) {
