@@ -5,6 +5,12 @@ var level = 0;
 var userChosenColour;
 var gameOver = false;
 
+document.addEventListener("DOMContentLoaded", function() {
+    $('h1').addClass('h1-animation');
+    setTimeout(function() {
+        $('h1').removeClass('h1-animation');
+    }, 4000);
+});
 
 // generates a random number between 0 and 3
 function nextSequence() {;
