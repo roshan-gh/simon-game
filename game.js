@@ -40,6 +40,7 @@ $('div[type="button"]').click(function() {
 
     if (level === 0) {
         alert('Press a key on the keyboard to start the game!');
+        console.log(userClickedPattern);
     } else {
         userChosenColour = this.id;
         userClickedPattern.push(userChosenColour);
@@ -78,8 +79,8 @@ function checkAnswer(game, user) {
 // restarts the game
 function startOver() {
     level = 0;
-    var gamePattern = [];
-    var userClickedPattern = [];
+    gamePattern = [];
+    userClickedPattern = [];
     $('body').removeClass('game-over');
     $('h1').text('Press A Key to Start');
     gameOver = false;
